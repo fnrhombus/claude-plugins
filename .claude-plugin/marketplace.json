@@ -12,7 +12,7 @@
         "ref": "main"
       },
       "description": "Claude Code hook that transparently converts Windows paths to POSIX in Bash commands — eliminating retry loops and saving tokens",
-      "version": "1.1.0",
+      "version": "2.0.3",
       "author": {
         "name": "fnrhombus"
       },
