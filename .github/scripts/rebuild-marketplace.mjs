@@ -57,8 +57,10 @@ const repos = ghJson([
 
 console.error(`Found ${repos.length} candidate repo(s).`);
 
-// Drop archived repos; private ones wouldn't surface in search but double-check.
-const live = repos.filter((r) => !r.isArchived && r.visibility === "PUBLIC");
+// Drop archived repos. gh search repos only returns public by default,
+// so no visibility check needed — adding one would just be fragile (field
+// casing varies between gh search and gh repo view).
+const live = repos.filter((r) => !r.isArchived);
 
 // ---------------------------------------------------------------------------
 // Fetch each plugin.json
