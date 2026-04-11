@@ -50,7 +50,7 @@ const repos = ghJson([
   `topic:${DISCOVERY_TOPIC}`,
   `user:${OWNER}`,
   "--json",
-  "name,fullName,defaultBranchRef,isArchived,visibility",
+  "name,fullName,defaultBranch,isArchived,visibility",
   "--limit",
   "100",
 ]);
@@ -67,7 +67,7 @@ const live = repos.filter((r) => !r.isArchived && r.visibility === "PUBLIC");
 const entries = [];
 
 for (const repo of live) {
-  const branch = repo.defaultBranchRef?.name ?? "main";
+  const branch = repo.defaultBranch ?? "main";
   const fullName = repo.fullName;
   console.error(`\n→ ${fullName}@${branch}`);
 
