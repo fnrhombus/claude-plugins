@@ -1,0 +1,41 @@
+name: Update marketplace
+
+# Pulls plugin metadata from every public fnrhombus repo tagged with the
+# 'claude-code-plugin' topic, rebuilds .claude-plugin/marketplace.json, and
+# commits any changes. Writes only to this repo — needs no cross-repo auth.
+
+on:
+  schedule:
+    # Daily at 06:17 UTC — off-peak, random minute to avoid cron thundering herd.
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Force a commit even if marketplace.json is unchanged"
+        required: false
+        default: "false"
+
+permissions:
+  contents: write
+
+jobs:
+  rebuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Rebuild marketplace.json from topic-tagged repos
+        id: rebuild
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          FORCE: ${{ inputs.force }}
+        run: node .github/scripts/rebuild-marketplace.mjs
+
+      - name: Commit changes
+        if: steps.rebuild.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .claude-plugin/marketplace.json
+          git commit -m "chore: refresh marketplace (${{ steps.rebuild.outputs.count }} plugins)"
+          git push
