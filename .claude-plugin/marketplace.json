@@ -12,11 +12,26 @@
         "ref": "main"
       },
       "description": "Claude Code hook that transparently converts Windows paths to POSIX in Bash commands — eliminating retry loops and saving tokens",
-      "version": "2.0.3",
+      "version": "2.0.4",
       "author": {
         "name": "fnrhombus"
       },
       "repository": "https://github.com/fnrhombus/claude-code-pathfix",
+      "license": "MIT"
+    },
+    {
+      "name": "winforms-mcp",
+      "source": {
+        "source": "github",
+        "repo": "fnrhombus/winforms-mcp-plugin",
+        "ref": "main"
+      },
+      "description": "WinForms automation MCP server — headless UI automation for Windows desktop apps using FlaUI",
+      "version": "1.3.0",
+      "author": {
+        "name": "fnrhombus"
+      },
+      "repository": "https://github.com/fnrhombus/winforms-mcp-plugin",
       "license": "MIT"
     }
   ]
