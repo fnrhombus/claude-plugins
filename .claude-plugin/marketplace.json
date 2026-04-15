@@ -20,6 +20,19 @@
       "license": "MIT"
     },
     {
+      "name": "fnsessionsave",
+      "source": {
+        "source": "github",
+        "repo": "fnrhombus/fnsessionsave",
+        "ref": "main"
+      },
+      "description": "Save structured session summaries to project memory. Never lose context across sessions.",
+      "version": "0.1.0",
+      "author": "fnrhombus",
+      "repository": "https://github.com/fnrhombus/fnsessionsave",
+      "license": "MIT"
+    },
+    {
       "name": "winforms-mcp",
       "source": {
         "source": "github",
