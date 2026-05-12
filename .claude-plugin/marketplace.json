@@ -20,6 +20,21 @@
       "license": "MIT"
     },
     {
+      "name": "claude-code-worktree-paths",
+      "source": {
+        "source": "github",
+        "repo": "fnrhombus/claude-code-worktree-paths",
+        "ref": "main"
+      },
+      "description": "Claude Code plugin that places --worktree worktrees at ~/src/<repo>@<user>+<wtname>/ on bare-named branches, when invoked via fnclaude.",
+      "version": "0.1.0",
+      "author": {
+        "name": "fnrhombus"
+      },
+      "repository": "https://github.com/fnrhombus/claude-code-worktree-paths",
+      "license": "MIT"
+    },
+    {
       "name": "fnsessionsave",
       "source": {
         "source": "github",
