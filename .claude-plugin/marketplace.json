@@ -24,10 +24,10 @@
       "source": {
         "source": "github",
         "repo": "fnrhombus/claude-code-worktree-paths",
-        "ref": "claude-code-worktree-paths-v0.4.0"
+        "ref": "claude-code-worktree-paths-v1.0.0"
       },
-      "description": "Claude Code plugin: customize where `--worktree` worktrees go and what branch they get, via path/branch templates in settings.json.",
-      "version": "0.5.0",
+      "description": "Claude Code plugin: customize where `--worktree` worktrees go and what branch they get, via repoSettings templates in settings.json.",
+      "version": "1.0.0",
       "author": {
         "name": "fnrhombus"
       },
