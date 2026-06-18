@@ -1,3 +1,12 @@
+> [!IMPORTANT]
+> **📦 This marketplace has moved to [`fnclaude/marketplace`](https://github.com/fnclaude/marketplace).**
+>
+> This repository is **archived** and no longer updated. In Claude Code, remove this marketplace and add the new one:
+>
+> ```
+> /plugin marketplace add fnclaude/marketplace
+> ```
+
 # fnrhombus plugins
 
 Central [Claude Code](https://code.claude.com) plugin marketplace for plugins published by [@fnrhombus](https://github.com/fnrhombus).
