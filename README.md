@@ -24,7 +24,7 @@ This marketplace is **auto-generated**. A scheduled GitHub Actions workflow in t
 
 Plugin authors do not need to touch this repo. They just:
 
-1. Create a new repo from [`fnrhombus/claude-code-plugin-template`](https://github.com/fnrhombus/claude-code-plugin-template)
+1. Create a new repo from [`fntemplate/claude-code-plugin`](https://github.com/fntemplate/claude-code-plugin)
 2. Tag it with the `claude-code-plugin` topic
 3. Keep `.claude-plugin/plugin.json` up to date on the default branch
 
